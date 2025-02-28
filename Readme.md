@@ -20,7 +20,7 @@ A TypeScript application for discovering, validating, and maintaining a list of 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/solana-rpc-validator.git
+git clone https://github.com/impulse-io/solana-rpc-validator.git
 cd solana-rpc-validator
 
 # Install dependencies
@@ -54,7 +54,8 @@ const CONFIG = {
   OUTPUT_FILE_PATH: path.join(process.cwd(), 'rpcHosts.json'), // Output file path
   TEST_TOKEN_ACCOUNT: 'H5Wuy51jEAV9mrDFUVbNsrSMcBckgHCqmc1r45e7ztVo', // Account to test
   CONNECTION_TIMEOUT_MS: 5000, // Timeout for RPC connections
-  MAX_BUFFER_SIZE: 10 * 1024 * 1024 // 10MB buffer for gossip command output
+  MAX_BUFFER_SIZE: 10 * 1024 * 1024, // 10MB buffer for gossip command output
+  MAX_CONCURRENT_TESTS: 25 // Configurable parallel RPC tests
 };
 ```
 
